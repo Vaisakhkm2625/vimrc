@@ -14,13 +14,14 @@ set undodir=~/.vim/undodir
 set undofile
 set incsearch
 
+"set path+=**
 
 set colorcolumn=80
 highlight ColorColumn ctermbg=0
 
 set background=dark
 
-
+"leader key given space
 let mapleader=" "
 
 nnoremap <leader>h :wincmd h<CR>
@@ -31,6 +32,16 @@ nnoremap <leader>e :wincmd v<bar> :Ex <bar> :vertical resize 30<CR>
 
 nnoremap <silent><leader>+ :vertical resize +5<CR>
 nnoremap <silent><leader>- :vertical resize -5<CR>
+"-----|to quickly add line next |------------
+"
+nnoremap <Leader>o o<Esc>0"_D
+nnoremap <Leader>O O<Esc>0"_D
+
+
+
+
+
+
 
 "-----|Relative or absolute number lines|-------
 
@@ -44,10 +55,7 @@ function! NumberToggle()
     endif
 endfunction
 
-nnoremap <C-n> :call NumberToggle()<CR>
-
-
-
+nnoremap <C-m> :call NumberToggle()<CR>
 
 "-----|sys-clipboard for nvim|-------
    if has('nvim')
@@ -58,6 +66,10 @@ nnoremap <C-n> :call NumberToggle()<CR>
    endif
 
 "===============================|plug-ins|=====================================
+
+
+" Need to add youCompleteMe plugin 
+    " http://
 
 
 "plug-in manager vim-plug
